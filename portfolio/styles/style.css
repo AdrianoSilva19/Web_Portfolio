@@ -7,7 +7,7 @@
 
 :root {
   --color-primary: #191d2b;
-  --color-secondary: #ffffff;
+  --color-secondary: #357e47;
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey-1: #f8f8f8;
@@ -37,7 +37,7 @@ a {
 
 header {
   height: 100vh;
-  color: var(--color-white);
+  color: var(--color-secondary);
   overflow: hidden;
 }
 
@@ -59,21 +59,38 @@ section {
 .sec1 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: rgba(19, 16, 27, 0.692);
 }
 
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: rgb(25, 23, 41);
 }
 
 .sec3 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: rgb(196, 13, 13);
 }
 
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: rgb(25, 23, 41);
+}
+
+.active {
+  display: block;
+  animation: scaleAnim 1s ease-in-out;
+}
+@keyframes scaleAnim {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
 }
 
 .controlls {
@@ -86,6 +103,13 @@ section {
   align-items: center;
   justify-content: center;
   transform: translateY(-50%);
+}
+.controlls .active-btn {
+  background-color: var(--color-secondary) !important;
+  transition: all 0.4s ease-in-out;
+}
+.controlls .active-btn i {
+  color: var(--color-white) !important;
 }
 .controlls .control {
   padding: 1rem;
