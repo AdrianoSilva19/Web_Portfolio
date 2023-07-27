@@ -257,22 +257,26 @@
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form action="" class="contact-form">
+                        <form action="/success" method="POST" class="contact-form" netlify data-netlify-honeypot="bot-field">
                             <div class="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME">
-                                <input type="text" required placeholder="YOUR EMAIL">
+                                <input type="text" name="name" required placeholder="YOUR NAME">
+                                <input type="email" name="email" required placeholder="YOUR EMAIL">
                             </div>
                             <div class="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT">
+                                <input type="text" name="subject" required placeholder="ENTER SUBJECT HERE">
                             </div>
                             <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Message here..."></textarea>
+                                <textarea name="message" cols="15" rows="8" placeholder="Message here..."></textarea>
                             </div>
                             <div class="submit-btn">
-                                <a href="" class="main-btn">
+                                <button type="submit" class="main-btn">
                                     <span class="btn-text">Submit</span>
                                     <span class="btn-icon"><i class="fa-regular fa-paper-plane"></i></span>
-                                </a>
+                                </button>
+                            </div>
+                            <div style="display: none;">
+                                <input type="hidden" name="bot-field">
+                                <input type="hidden" name="form-name" value="contact">
                             </div>
                         </form>
                     </div>
